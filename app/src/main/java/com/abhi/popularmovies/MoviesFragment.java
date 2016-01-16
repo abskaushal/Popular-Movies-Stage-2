@@ -68,11 +68,13 @@ public class MoviesFragment extends Fragment implements IAsyncListener {
 
         if (savedInstanceState == null || !savedInstanceState.containsKey(MOVIES_KEY)) {
             mList = new ArrayList<Movie>();
-            if (Utils.isNetworkConnected(getContext())) {
+            if (Utils.isNetworkConnected(getContext()) || Utils.getSortOrder(getContext()).equalsIgnoreCase(getString(R.string.pref_sort_favorite))) {
                 mAsync = new GetMoviesAsync(getContext(), this);
                 mAsync.execute(Utils.getSortOrder(getContext()));
             } else {
                 Toast.makeText(getContext(), getString(R.string.no_internet_connection), Toast.LENGTH_SHORT).show();
+                recyclerView.setVisibility(View.GONE);
+                noMovieRelative.setVisibility(View.VISIBLE);
             }
         } else {
             mList = savedInstanceState.getParcelableArrayList(MOVIES_KEY);
@@ -149,11 +151,13 @@ public class MoviesFragment extends Fragment implements IAsyncListener {
     }
 
     public void changeOrder(String order) {
-        if (Utils.isNetworkConnected(getContext())) {
+        if (Utils.isNetworkConnected(getContext()) || order.equalsIgnoreCase(getString(R.string.pref_sort_favorite))) {
             mAsync = new GetMoviesAsync(getContext(), this);
             mAsync.execute(order);
         } else {
             Toast.makeText(getContext(), getString(R.string.no_internet_connection), Toast.LENGTH_SHORT).show();
+            recyclerView.setVisibility(View.GONE);
+            noMovieRelative.setVisibility(View.VISIBLE);
         }
     }
 
