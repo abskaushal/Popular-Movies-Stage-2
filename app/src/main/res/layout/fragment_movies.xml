@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/movie_list"
+        android:name="com.abhi.popularmovies.MoviesFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="5sp"
+        android:layout_marginRight="5sp"
+        android:background="@color/colorGrey"
+        tools:context="com.abhi.popularmovies.MoviesFragment" />
+
+    <RelativeLayout
+        android:id="@+id/no_movies_available"
+        android:layout_width="match_parent"
+        android:background="@color/colorWhite"
+        android:visibility="gone"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/no_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ic_no_movies"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorBlack"
+            android:layout_below="@+id/no_image"
+            android:gravity="center"
+            android:textSize="22sp"
+            android:text="@string/no_movies"/>
+    </RelativeLayout>
+</LinearLayout>
+
+
+

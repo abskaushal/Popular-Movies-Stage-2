@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#262626</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorHeader">#009683</color>
+    <color name="colorFav">#55E7DB</color>
+    <color name="colorFavPressed">#36e3d4</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorGrey">#CACECE</color>
+    <color name="colorGreyDark">#808080</color>
+    <color name="colorFab">#FF8533</color>
+</resources>
