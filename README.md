@@ -18,6 +18,7 @@ it.buildConfigField 'String', 'THE_MOVIE_DB_API_KEY', 'YOUR_API_KEY'
 
 ## Screens
 
-![screen](../master/screenshots/mobile_movies_grid.png)
+![movies grid](../master/screenshots/movies_grid_phone.png)
 
-![screen](../master/art/mobile_movies_detail.png)
+
+![movie detail](../master/screenshots/movies_detail_phone.png)
