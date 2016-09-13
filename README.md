@@ -22,3 +22,5 @@ it.buildConfigField 'String', 'THE_MOVIE_DB_API_KEY', 'YOUR_API_KEY'
 
 
 ![movie detail](../master/screenshots/movies_detail_phone.png)
+
+![tablet layout](../master/screenshots/screen-tablet.png)
